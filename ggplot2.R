@@ -44,6 +44,7 @@ theme(title=element_text(size=15)) #change the font size of the title, etc.
 
 theme(legend.text = element_text(size=13, color="black"))
 theme(legend.title = element_text(size=13, color = "black"))
+guides(alpha = guide_legend(override.aes = list(colour = "white"))) #changes the color of the legend icon, here for alpha property
 
 theme(legend.key.height =unit(2,"line")) #adjusts the vertical spacing between the legend factor labels and legend keys/labels
 theme(legend.spacing.x = unit(5.0, 'cm')) #adjust the horizontal space between the legend keys and the labels of the keys
