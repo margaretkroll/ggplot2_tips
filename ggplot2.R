@@ -31,6 +31,7 @@ theme_minimal(base_size=14, base_family="Times New Roman") #set size of the grid
 #change the size and color of the background grid
 #element_blank() removes that grid, color="" changes the color of the grid lines
 theme(panel.grid.minor=element_blank(), panel.grid.major=element_line(color="grey60")) 
+panel.grid = element_line(size=0.1) #change the thickness of the grid lines
 
 #TITLES/CAPTIONS
 #add titles/captions and change their text
@@ -57,6 +58,7 @@ theme(legend.position="bottom")  #position the legend at the bottom of the plot
 theme(legend.title = element_blank()) #remove the legend title
 
 
+
 #AXIS LIMITS/TICKS
 #change the axis limits and tick marks
 ylim(0, 1000) #sets the y-axis limits for the plot; note that this does not change the tick frequency or spacing
@@ -72,6 +74,9 @@ ylab("Total Count") + xlab("Coding Bin") #add y and x axis labels
 theme(axis.text.x=element_text(size=13, color ="black")) + theme(axis.text.y=element_text(size=13, color="black"))
 theme(axis.title.x = element_text(size=16, color = "black")) + theme(axis.title.y = element_text(size=16, color = "black"))
 theme(axis.title.x = element_blank()) #will remove the x-axis title
+theme(axis.text.x = element_text(vjust = 4)) #increases the vertical space between the x-axis label and the x-axis region
+
+theme(strip.text.y = element_text(color = "white")) #change the font of the facet axis labels
 
 
 #POINTS/BARS
