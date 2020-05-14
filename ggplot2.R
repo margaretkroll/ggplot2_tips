@@ -64,6 +64,8 @@ theme(legend.title = element_blank()) #remove the legend title
 ylim(0, 1000) #sets the y-axis limits for the plot; note that this does not change the tick frequency or spacing
 scale_y_continuous(breaks=pretty_breaks(n=10))  #will create breaks at 10 num. intervals on your y axis
 scale_x_discrete(limits=0:12) #for discrete values on the x-axis will force labels from 1-12 in 1 num. intervals
+scale_x_continuous(trans="log2") #log2, log10, etc. create a logarithmic scale on your x or y axis
+scale_x_continuous(breaks = round(seq(min(0), max(1500), by = 300),1)) #change the range of the x/y axis and interval of tick marks
 
 #reorder x axis based on values from smallest to largest (www.rdocumentation.org/packages/stats/versions/3.6.2/topics/reorder.default)
 geom_bar(aes(y=n, x=reorder(factor, -n))
