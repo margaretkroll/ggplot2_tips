@@ -57,6 +57,8 @@ guides(color = guide_legend(override.aes = list(size=2))) #changes the size of t
 theme(legend.position="bottom")  #position the legend at the bottom of the plot
 theme(legend.title = element_blank()) #remove the legend title
 
+scale_fill_manual(labels=c("cond1", "cond2"), name="Legend Title") #change the name of the legend title and the condition names
+
 
 
 #AXIS LIMITS/TICKS
